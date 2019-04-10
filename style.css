@@ -1,3 +1,35 @@
+html  {
+    background: red;
+}
 body  {
-    background: gray
+    background: gray;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    background: #0c2461;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* centrare da sinistra -> verticale*/
+    align-items: center;     /* centra dall'alto -> orizzontale */
+}
+
+.card {
+    border: 1px solid white;
+    height: 30rem;
+    width: 20rem;
+    position: relative;
+    
+}
+
+.card-footer {
+    background: #dfe6e9;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
 }
