@@ -12,6 +12,18 @@ imageUploader.addEventListener(
     'change',
     (e) => {
         const theFile = e.target.files[0];
-        console.log(theFile);
+        
+        const formData  = new FormData();
+        formData.append('file', theFile);
+        formData.append('upload_preset', CLAUDINARY_PRESET);
+
+        axios.post(
+            CLAUDINARY_URL,
+            formData,
+            {
+                'Content-Type': 'multipart/form-data'
+            }
+        );
+
     }
 );
