@@ -10,20 +10,19 @@ const CLAUDINARY_PRESET = 'yzsmlfl9';
 
 imageUploader.addEventListener(
     'change',
-    (e) => {
+    async (e) => {
         const theFile = e.target.files[0];
         
         const formData  = new FormData();
         formData.append('file', theFile);
         formData.append('upload_preset', CLAUDINARY_PRESET);
-
-        axios.post(
+        const response = await axios.post(
             CLAUDINARY_URL,
             formData,
             {
                 'Content-Type': 'multipart/form-data'
             }
         );
-
+        console.log(response);        
     }
 );
