@@ -23,11 +23,13 @@ imageUploader.addEventListener(
             formData,
             {
                 headers: { 'Content-Type': 'multipart/form-data' },
+                onUploadProgress(e) {
+                    const progressValue = (e.loaded * 100) / e.total;
+                    imageUploadBar.setAttribute('value', progressValue);
+                }
             }
         );
         console.log(response);
-
         imagePreview.src = response.data.secure_url;
-
     }
 );
