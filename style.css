@@ -32,6 +32,12 @@ body  {
     
 }
 
+.progress-bar {
+    width: 100%;
+    margin: 10px 0;
+
+}
+
 .card-footer {
     background: #dfe6e9;
     position: absolute;
