@@ -23,6 +23,9 @@ imageUploader.addEventListener(
                 'Content-Type': 'multipart/form-data'
             }
         );
-        console.log(response);        
+        console.log(response);
+        
+        imagePreview.src = response.data.secure_url;
+
     }
 );
