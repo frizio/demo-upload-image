@@ -22,11 +22,11 @@ imageUploader.addEventListener(
             CLAUDINARY_URL,
             formData,
             {
-                'Content-Type': 'multipart/form-data'
+                headers: { 'Content-Type': 'multipart/form-data' },
             }
         );
         console.log(response);
-        
+
         imagePreview.src = response.data.secure_url;
 
     }
